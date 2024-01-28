@@ -12,11 +12,12 @@
     <artifactId>event-driven</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>event-driven</name>
-    <description>event-driven</description>
+    <description>Microservices project with Spring boot</description>
+    <packaging>pom</packaging>
+
     <modules>
         <module>twitter-to-kafka-service</module>
     </modules>
-    <packaging>pom</packaging>
 
     <properties>
         <java.version>21</java.version>
@@ -38,6 +39,12 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${spring-boot.version}</version>
                 <scope>test</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.junit.vintage</groupId>
+                        <artifactId>junit-vintage-engine</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>

@@ -12,7 +12,6 @@ import java.util.Arrays;
 @SpringBootApplication
 public class TwitterToKafkaServiceApplication implements CommandLineRunner {
     private static final Logger LOG = LoggerFactory.getLogger(TwitterToKafkaServiceApplication.class);
-
     private final TwitterToKafkaServiceConfigData twitterToKafkaServiceConfigData;
 
     public TwitterToKafkaServiceApplication(TwitterToKafkaServiceConfigData configData) {
@@ -20,8 +19,8 @@ public class TwitterToKafkaServiceApplication implements CommandLineRunner {
     }
 
     public static void main(String[] args) {
-            SpringApplication.run(TwitterToKafkaServiceApplication.class, args);
-        }
+        SpringApplication.run(TwitterToKafkaServiceApplication.class, args);
+    }
 
     @Override
     public void run(String... args) throws Exception {
